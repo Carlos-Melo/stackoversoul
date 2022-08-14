@@ -1,0 +1,65 @@
+<div class="container pt-5">
+    <div class="row justify-content-between">
+        <div class="col-12 col-lg-7 order-2 order-lg-1">
+            <div class="bg-white car-area p-4">
+                <div class="col-12 d-flex justify-content-between">
+                    <div class="col-9 col-md-10">
+                        <input type="text" class="form-control ps-3" id="pesquisar" placeholder="Pesquisar...">
+                    </div>
+                    <div class="col-2 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-pesquisar mb-3">Pesquisar</button>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-2 col-lg-1">
+                        <img src="../../../../../assets/user.png" alt="Usuario">
+                    </div>
+                    <div class="col-10 col-lg-11">
+                        <button type="submit" class="btn btn-pergunta w-100 mb-3" (click)="openModal('Criar')">Criar Pergunta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-white car-area my-4">
+                <div class="card-header bg-white">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img src="../../../../../assets/user.png" class="me-2">
+                            <div>
+                                <h6 class="m-0">Carlos Eduardo</h6>
+                                <p class="m-0" style="font-size:12px ;">27 de Maio de 2022</p>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <img src="../../../../../assets/dots.png" id="dropdownMenuCard" data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuCard">
+                                <li><a class="dropdown-item" (click)="openModal('Editar')">Editar</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Excluir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div  routerLink="/pergunta/1" style="cursor:pointer;">
+                    <div class="card-body">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Paisis, filhis, espiritis santis? </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <span class="p-1 rounded">Cursor</span>
+                        <img src="../../../../../assets/accept.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Resolvido">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-lg-4 p-0 mb-4 md-lg-0 order-1 order-lg-2">
+            <div class="card car-area bg-white">
+                <div class="card-header bg-white">
+                    <h6 class="card-title m-1">Tags</h6>
+                </div>
+                <div class="card-body d-flex flex-wrap align-items-start">
+                    <span class="p-1 rounded me-2" style="cursor:pointer;">Cursor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+#pesquisar{
+    box-shadow: none;
+    &:focus{
+        border: 1px solid #224B61;
+    }
+}
+
+.btn-pergunta {
+    background-color: #E4E6EB;
+    box-shadow: none;
+}
+
+.btn-pesquisar {
+    background-color: #224B61;
+    color: white;
+    box-shadow: none;
+}
+
+span{
+    background-color: #D8DADF;
+}
+
+.dropdown-item {
+    background-color: white;
+    &:hover{
+        background-color: #E9ECEF;
+    }
+}

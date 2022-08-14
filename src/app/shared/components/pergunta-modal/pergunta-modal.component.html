@@ -1,0 +1,22 @@
+<div class="modal-content text-dark-gray">
+    <div class="modal-header">
+      <h6 class="modal-title">{{acao}} pergunta</h6>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="mt-4">
+        <div class="w-100 ">
+            <textarea class="form-control perguntar" placeholder="Perguntar..." rows="3"></textarea>
+            <select class="form-select mt-3 perguntar" aria-label="Default select example">
+                <option selected hidden>Tag</option>
+                <option value="Cursor">Cursor</option>
+                <option value="Ref<>">Ref<></option>
+            </select> 
+        </div>
+    </div>
+    <div class="modal-footer border-0 justify-content-end mt-4">
+      <button type="button" class="btn btn-perguntar" data-bs-dismiss="modal" (click)="onClose()">{{acao}}</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onClose()">Cancelar</button>
+    </div>
+</div>
+  
