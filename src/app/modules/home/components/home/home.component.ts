@@ -9,15 +9,10 @@ import { PerguntaModalComponent } from 'src/app/shared/components/pergunta-modal
 })
 export class HomeComponent implements OnInit {
 
-  bsModalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { }
+  
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  openModal(pAcao: string) {
-    this.bsModalRef = this.modalService.show(PerguntaModalComponent);
-    this.bsModalRef.content.acao = pAcao;
   }
 
 }

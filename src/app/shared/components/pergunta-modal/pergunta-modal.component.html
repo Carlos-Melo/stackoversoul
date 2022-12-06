@@ -1,22 +1,37 @@
-<div class="modal-content text-dark-gray">
-    <div class="modal-header">
-      <h6 class="modal-title">{{acao}} pergunta</h6>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()"></button>
-    </div>
-    <div class="modal-body">
-      <div class="mt-4">
-        <div class="w-100 ">
-            <textarea class="form-control perguntar" placeholder="Perguntar..." rows="3"></textarea>
-            <select class="form-select mt-3 perguntar" aria-label="Default select example">
-                <option selected hidden>Tag</option>
-                <option value="Cursor">Cursor</option>
-                <option value="Ref<>">Ref<></option>
-            </select> 
+<div class="modal-content overflow-auto" style="max-height:500px;">
+  <div class="modal-header">
+    <h6 class="modal-title text-center w-100 fs-5">{{acao}} pergunta</h6>
+    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()"></button>
+  </div>
+  <div class="modal-body">
+    <div class="mt-4">
+      <div>
+        <div class="text-end text-muted" style="font-size:11px;">
+          <span>{{vMaxLimit}} de 254</span>
         </div>
+        <textarea class="form-control mb-2" rows="4" placeholder="Pergunte algo..." (keyup)="maxLimit($event)"></textarea>
+      </div>
+      <div>
+        <input class="form-control mt-2" placeholder="Insira uma tag..." type="text" name="tag" id="tag">
+        <ul class="list-tag list-unstyled mt-2">
+            <li>
+                <span class="p-1 me-1 rounded pe-auto">JavaScript</span>
+            </li>
+        </ul>
+      </div> 
+      <div>
+          <div *ngIf="isImagemSelected">
+              <img class="img-thumbnail" [src]="[imageSrc]">
+              <button type="button" class="btn-close close-image rounded-circle p-2" (click)="onImageRemoved()"></button>
+          </div>
+          <div *ngIf="!isImagemSelected">
+              <label for="arquivo" class="input-text w-100" >Enviar imagem</label>
+              <input type="file" name="arquivo" id="arquivo" (change)="onImageSelected($event)">
+          </div>
+      </div>
     </div>
-    <div class="modal-footer border-0 justify-content-end mt-4">
-      <button type="button" class="btn btn-perguntar" data-bs-dismiss="modal" (click)="onClose()">{{acao}}</button>
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onClose()">Cancelar</button>
-    </div>
+  </div>
+  <div class="modal-footer border-0">
+    <button type="button" class="btn btn-perguntar w-100" data-bs-dismiss="modal" (click)="onClose()">{{acao}}</button>
+  </div>
 </div>
-  

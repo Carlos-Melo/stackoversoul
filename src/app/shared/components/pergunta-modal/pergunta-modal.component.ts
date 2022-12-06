@@ -9,6 +9,9 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 export class PerguntaModalComponent implements OnInit {
 
   @Input() acao: string;
+  imageSrc: any;
+  isImagemSelected: boolean = false;
+  vMaxLimit: number = 0;
 
   constructor(public bsModalRef: BsModalRef) { }
 
@@ -17,6 +20,26 @@ export class PerguntaModalComponent implements OnInit {
 
   onClose() {
     this.bsModalRef.hide();
+  }
+
+  onImageSelected(event): void {
+    if(event.target.files && event.target.files[0]){
+      const file:File = event.target.files[0];
+
+      const reader = new FileReader();
+      reader.onload = e => this.imageSrc = reader.result;
+
+      reader.readAsDataURL(file);
+      this.isImagemSelected = true;
+    }
+  }
+
+  onImageRemoved(): void {
+    this.isImagemSelected = false;
+  }
+
+  maxLimit(event) {
+    this.vMaxLimit = event.target.value.length;
   }
 
 }

@@ -4,8 +4,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { PerguntaModalComponent } from './components/pergunta-modal/pergunta-modal.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -18,6 +16,8 @@ import { PerguntaModalComponent } from './components/pergunta-modal/pergunta-mod
   exports: [
     HeaderComponent,
     PerguntaModalComponent
+  ],
+  providers: [
   ],
   entryComponents: [PerguntaModalComponent]
 })

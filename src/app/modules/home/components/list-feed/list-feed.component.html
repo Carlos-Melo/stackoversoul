@@ -1,0 +1,30 @@
+<div class="card bg-white car-area my-4">
+    <div class="card-header bg-white">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="../../../../../assets/user.png" class="me-2">
+                <div>
+                    <h6 class="m-0">Carlos Eduardo</h6>
+                    <p class="m-0" style="font-size:12px ;">27 de Maio de 2022</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <img src="../../../../../assets/dots.png" id="dropdownMenuCard" data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuCard">
+                    <li><a class="dropdown-item" (click)="openModal('Editar')">Editar</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Excluir</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div  routerLink="/pergunta/1" style="cursor:pointer;">
+        <div class="card-body">
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Paisis, filhis, espiritis santis? </p>
+        </div>
+        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="p-1 rounded">Cursor</span>
+            <img src="../../../../../assets/accept.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Resolvido">
+        </div>
+    </div>
+</div>

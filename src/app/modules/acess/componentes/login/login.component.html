@@ -1,0 +1,24 @@
+<div class="container pt-5">
+    <div class="row justify-content-center">
+        <form class="col-12 col-md-5 p-3 p-md-5 bg-white" [formGroup]="loginForm" (submit)="login()">
+            <div class="text-center mt-5">
+                <p class="fs-3">StackOver<b>Soul</b></p>
+            </div>
+            <div class="mb-3 mt-5">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input formControlName="user" type="text" class="form-control">
+                <app-vmessage text="Usuário é requirido!" *ngIf="loginForm.get('user').errors?.required"></app-vmessage>
+            </div>    
+            <div>
+                <label for="senha" class="form-label">Senha</label>
+                <input formControlName="password" type="password" class="form-control">
+                <app-vmessage text="Senha é requirida!" *ngIf="loginForm.get('password').errors?.required"></app-vmessage>
+            </div>
+            <p class="text-end m-0" style="font-size:13px;"><a href="#" class="mt-1 p-0">Esqueceu a senha?</a> </p>
+            <div class="my-4">
+                <button type="submit" class="btn mt-4 w-100">Entrar</button>
+            </div>
+            <p class="mt-5 text-muted text-center" style="font-size:13px;">Não tem uma conta? <a href="#" class="p-0">Cadastre-se</a> </p>
+        </form>
+    </div>
+</div>

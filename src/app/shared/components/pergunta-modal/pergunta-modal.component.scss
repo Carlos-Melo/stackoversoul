@@ -4,11 +4,68 @@
     box-shadow: none;
 }
 
-.perguntar{
+.btn-close {
+    background-color: #e0e0e0;
     box-shadow: none;
-    background-color: #EBEDF0;
-    
     &:focus{
-        border: 1px solid #224B61;
+        border: 0 none;
+        box-shadow: none;
+    }
+}
+
+.modal-content {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #fff;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #e0e0e0;
+        border-radius: 20px;
+        border: 3px solid #fff;
+    }
+}
+
+.form-control {
+    box-shadow: none;
+    resize: none;
+    border-color: #e0e0e0;
+    &:focus{
+        border-color: #e0e0e0;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.close-image {
+    background-color: #fff;
+    position: absolute;
+    box-shadow: none;
+    top: 275px;
+    right: 30px;
+}
+
+.input-text {
+    border: 1px dashed #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #616161;
+}
+
+.list-tag{
+    display: flex;
+    padding: 0;
+    li{
+        span{
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
     }
 }

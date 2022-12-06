@@ -1,0 +1,10 @@
+span{
+    background-color: #D8DADF;
+}
+
+.dropdown-item {
+    background-color: white;
+    &:hover{
+        background-color: #E9ECEF;
+    }
+}
